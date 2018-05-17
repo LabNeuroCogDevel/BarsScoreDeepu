@@ -8,7 +8,7 @@ Xdats like
 # Name="FIVEPunishTarget426"   # 149
 
 taskfile="/Volumes/L/bea_res/Tasks/Behavorial/chuck bar task 031708/Behavioral Value Bars with scoring - v. 1.es"
-egrep "(Neu|FIVE).*Target" -B 1  "$taskfile" |grep Code -A 1|grep -v \- | perl -ne 'print $1+10, "\t" if /EVENTSTROBE\+(\d+)/; print $_ if s/Name=//'
+egrep "(Neu|FIVE).*Target" -B 1  "$taskfile" | perl -ne 'print $1+10, "\t" if /EVENTSTROBE\+(\d+)/; print $_ if s/^Name=//'
 # 202     "NeutralTarget214"
 # 203     "NeutralTarget426"
 # 204     "NeutralTarget532"
